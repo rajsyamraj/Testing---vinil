@@ -6,7 +6,7 @@ node {
     }
 
     stage('Deploy to Second VM') {
-        sshagent(['second-vm-ssh']) {
+        sshagent(['GIT']) {
             sh '''
             ssh -o StrictHostKeyChecking=no jenkins@192.168.1.32 '
                 cd /apps &&
