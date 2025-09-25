@@ -3,9 +3,9 @@ stage('Deploy to Second VM') {
         sshagent(['second-vm-ssh']) {
             sh '''
             ssh -o StrictHostKeyChecking=no jenkins@192.168.1.32 '
-                cd /home/jenkins/deployment &&
+                cd /apps/ &&
                 git pull &&
-                chmod +x deploy.sh &&
+                chmod +x test.sh &&
                 ./deploy.sh
             '
             '''
