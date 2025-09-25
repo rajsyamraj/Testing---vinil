@@ -6,7 +6,7 @@ stage('Deploy to Second VM') {
                 cd /apps/ &&
                 git pull &&
                 chmod +x test.sh &&
-                ./deploy.sh
+                ./test.sh
             '
             '''
         }
